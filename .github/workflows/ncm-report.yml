@@ -1,0 +1,33 @@
+name: NodeSource Certification process
+on: [push, pull_request]
+
+jobs:
+  ncm_report:
+    runs-on: ubuntu-latest
+    name: NodeSource Certification process
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - name: Report without options
+        id: report
+        uses: nodesource/ncm-report-github-action@master
+        with:
+          token: ${{ secrets.NCM_TOKEN }}
+      - name: Report with --long
+        id: report_long
+        uses: nodesource/ncm-report-github-action@master
+        with:
+          token: ${{ secrets.NCM_TOKEN }}
+          long: 'yes'
+      - name: Report with --compliance
+        id: report_compliance
+        uses: nodesource/ncm-report-github-action@master
+        with:
+          token: ${{ secrets.NCM_TOKEN }}
+          compliance: 'yes'
+      - name: Report with --security
+        id: report_security
+        uses: nodesource/ncm-report-github-action@master
+        with:
+          token: ${{ secrets.NCM_TOKEN }}
+          security: 'yes'

@@ -1,0 +1,31 @@
+name: 'NCM Report'
+description: 'Generates a project-wide report of directory risk and quality of installed or specified packages.'
+inputs:
+  token:
+    description: 'Set a NodeSource service token'
+    required: true
+  long:
+    description: 'Make a report with a list of all modules'
+    required: false
+    default: 'no'
+  compliance:
+    description: 'Only display non-compliant packages'
+    required: false
+    default: 'no'
+  security:
+    description: 'Only display packages with vulnerabilities'
+    required: false
+    default: 'no'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.long }}
+    - ${{ inputs.compliance }}
+    - ${{ inputs.security }}
+
+branding:
+  icon: 'layers'
+  color: 'green'
