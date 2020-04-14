@@ -16,6 +16,13 @@ inputs:
     description: 'Only display packages with vulnerabilities'
     required: false
     default: 'no'
+  github_token:
+    description: 'Send a Github Token'
+    required: true
+    default: ''
+  github_job_name:
+    description: 'Set the name of the job'
+    required: true
 
 runs:
   using: 'docker'
@@ -25,6 +32,8 @@ runs:
     - ${{ inputs.long }}
     - ${{ inputs.compliance }}
     - ${{ inputs.security }}
+    - ${{ inputs.github_token }}
+    - ${{ inputs.github_job_name }}
 
 branding:
   icon: 'layers'
