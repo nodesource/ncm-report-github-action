@@ -16,6 +16,9 @@ inputs:
     description: 'Only display packages with vulnerabilities'
     required: false
     default: 'no'
+  github_token:
+    discription: 'Send a Github Token'
+    required: true
 
 runs:
   using: 'docker'
@@ -25,6 +28,7 @@ runs:
     - ${{ inputs.long }}
     - ${{ inputs.compliance }}
     - ${{ inputs.security }}
+    - ${{ inputs.github_token }}
 
 branding:
   icon: 'layers'
