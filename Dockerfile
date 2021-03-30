@@ -6,7 +6,7 @@ LABEL homepage="https://nodesource.com"
 LABEL maintainer="NodeSource"
 
 RUN apt-get update && apt-get install -y g++ build-essential
-RUN npm install -g nodesource/ncm-cli#gio/bump
+RUN npm install -g ncm-cli
 
 COPY entrypoint.sh /entrypoint.sh
 
