@@ -1,5 +1,7 @@
 #!/bin/bash -l
 
+rm -rf package-lock.json
+
 if [[ "$2" = "yes" ]]
 then
   FORCE_COLOR=1 IS_GITHUB_ACTION=true NCM_TOKEN=$1 ncm report --long
