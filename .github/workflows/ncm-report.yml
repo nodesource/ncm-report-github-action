@@ -15,3 +15,9 @@ jobs:
           token: ${{ secrets.NCM_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           github_job_name: N|S -> NCM Pipeline
+      - name: Annotate
+              uses: Attest/annotations-action@v0.1.0
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                input: './annotations.json'
+                title: 'Annotate Files'
