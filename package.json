@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/nodesource/ncm-report-github-action.git"
   },
-  "author": "",
+  "author": "NodeSource",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nodesource/ncm-report-github-action/issues"
