@@ -13,6 +13,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           input: './annotations.json'
+          path: './annotations.json'
           title: 'Annotate Files'
       - name: NCM Report
         id: report
