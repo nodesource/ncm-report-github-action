@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-rm -rf package-lock.json
+npm i
 
 if [[ "$2" = "yes" ]]
 then
