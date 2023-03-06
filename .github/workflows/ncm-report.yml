@@ -8,6 +8,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install
+      - name: Annotate
+        uses: Attest/annotations-action@v0.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          input: './annotations.json'
+          title: 'Annotate Files'
       - name: NCM Report
         id: report
         uses: nodesource/ncm-report-github-action@v1.2.0
