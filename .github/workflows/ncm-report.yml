@@ -10,7 +10,7 @@ jobs:
       - run: npm install
       - name: NCM Report
         id: report
-        uses: nodesource/ncm-report-github-action@v1.2.0
+        uses: nodesource/ncm-report-github-action@gate
         with:
           token: ${{ secrets.NCM_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
