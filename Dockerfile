@@ -6,7 +6,7 @@ LABEL homepage="https://nodesource.com"
 LABEL maintainer="NodeSource"
 
 RUN echo "deb http://security.debian.org/debian-security bullseye-security main contrib non-free" > /etc/apt/sources.list
-RUN apt-get update && apt-get install -y g++ build-essential
+RUN apt-get update && apt-get install -y g++ dpkg-dev gcc libc6-dev make 
 RUN npm install -g https://github.com/nodesource/ncm-cli.git#gate
 
 COPY . /
