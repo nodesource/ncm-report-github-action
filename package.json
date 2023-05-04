@@ -1,0 +1,19 @@
+{
+  "name": "ncm-report-github-action",
+  "version": "1.0.0",
+  "description": "![NodeSource Certification process](https://github.com/nodesource/ncm-report-github-action/workflows/NodeSource%20Certification%20process/badge.svg?event=push)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodesource/ncm-report-github-action.git"
+  },
+  "author": "NodeSource",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nodesource/ncm-report-github-action/issues"
+  },
+  "homepage": "https://github.com/nodesource/ncm-report-github-action#readme"
+}
